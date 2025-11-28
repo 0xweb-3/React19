@@ -11,7 +11,7 @@
 
 - v1.0.0 搭建前沿开发环境
   - v1.1.0 Vite + React 19 构建开发环境 ✅
-  - v1.2.0 项目总控：package.json
+  - v1.2.0 项目总控：package.json✅
   - v1.3.0 工程监理：package-lock.json
   - v1.4.0 施工蓝图：vite.config.js
 - v2.0.0 React核心机制与组件化艺术
