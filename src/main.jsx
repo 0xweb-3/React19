@@ -4,15 +4,28 @@ import React from 'react'; // 是最核心的库，主要用于用于定义和�
 // react-dom/client: 是React 18以后才引入的APl,专门用来创建 React应用的入口。
 import ReactDOM from 'react-dom/client'; // 负责将 React 组件渲染到页面上，就是把你写好的组件“挂”到网页上的某个位置；
 
+// import Product from './components/Product';
+import Product from '@components/Product';
 
 // 一个简单的组件
 // 什么是组件
 //你可以简单理解为一个“自定义的页面小模块”。它本质上就是一个函数，function,
 // 它会返回一段结构，这段结构看起来像 HTML,实际上是React的一种特殊语法，叫做JSX。
 // 所以，这也就是为什么我们的main 文件叫做 main.js
-function App() { // 组件名首字母得大写
-    return <h1>Hello, world!</h1>;
+// function App() { // 组件名首字母得大写
+//     return <h1>Hello, world!</h1>;
+// }
+
+function App() {
+    // 单根节点原则
+    return (
+        <div>
+            <h1>Hello, Reac!</h1>
+            <Product/>
+        </div>
+    )
 }
+
 
 // JSX 是JavaScript 的语法扩展，它让我们可以在 JavaScript 里直接写出类似HTML的结构
 

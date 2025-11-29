@@ -6,7 +6,7 @@ import { fileURLToPath } from "url"; //把url转为文件的路径
 const __filename = fileURLToPath(import.meta.url); // 转换meta url
 const __dirname = path.dirname(__filename); // 生成工作路径
 // 定义工作函数
-const createAlias = (dirName) => path.resolve(__dirname, `src/ ${dirName}`);
+const createAlias = (dirName) => path.resolve(__dirname, `src/${dirName}`);
 //  components => /你的项目根目录/src/components
 
 // https://vite.dev/config/
