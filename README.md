@@ -16,8 +16,8 @@
   - v1.4.0 施工蓝图：vite.config.js✅
 - v2.0.0 React核心机制与组件化艺术
   - v2.1.0 React 根组件：从零开始构建你的应用✅
-  - JSX 语法革命：从HTML到React的华丽变身✅
-  - JSX + 组件 + 单根法则：React世界的第一性原理✅
+  - v2.2.0 JSX 语法革命：从HTML到React的华丽变身✅
+  - v2.3.0 JSX + 组件 + 单根法则：React世界的第一性原理✅
   - React 视觉工程入门：CSS 基础与原子化设计
   - CSS模块化实战：企业级样式污染解决方案
   - Styled-components 样式化组件炫技：动态主题动画响应式一站式开发
