@@ -2,10 +2,19 @@
 import ipad_pro_image from "~img/store-card-ipad-pro.jpeg"
 
 function Product() {
-    return <div>
-        <div>iPad pro</div>
-        <div>产品说明</div>
-        <img src={ipad_pro_image} alt="iPad pro"/>
+    const imgStyle = {
+        height: "auto",
+        width: "100%",
+        borderRadius: "0.5rem",
+    }
+
+    return <div style={{maxWidth: "28rem", position: "relative"}}>
+        <img src={ipad_pro_image} alt="iPad pro" style={imgStyle}/>
+
+        <div className="product-text-container">
+            <div className="product-title">iPad pro</div>
+            <div className="product-detail">产品说明</div>
+        </div>
     </div>;
 }
 

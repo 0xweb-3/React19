@@ -7,6 +7,9 @@ import ReactDOM from 'react-dom/client'; // 负责将 React 组件渲染到页�
 // import Product from './components/Product';
 import Product from '@components/Product';
 
+import "./main.css" // 引入css文件
+
+
 // 一个简单的组件
 // 什么是组件
 //你可以简单理解为一个“自定义的页面小模块”。它本质上就是一个函数，function,
