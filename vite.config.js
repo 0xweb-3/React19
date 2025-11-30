@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path"; // 用于拼接路径或转换绝对路径
 import { fileURLToPath } from "url"; //把url转为文件的路径
+import eslint from "vite-plugin-eslint";
 
 const __filename = fileURLToPath(import.meta.url); // 转换meta url
 const __dirname = path.dirname(__filename); // 生成工作路径
@@ -11,7 +12,10 @@ const createAlias = (dirName) => path.resolve(__dirname, `src/${dirName}`);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()], // 插件
+  plugins: [
+      react(),
+      eslint(),
+  ], // 插件
   server: {
     port: 3000,
   },

@@ -23,6 +23,7 @@ function Product(props) {
         width: "100%",
         borderRadius: "0.5rem",
     };
+    // props.image = "xxxx" //修改会报错
     return (
         <StyledProductContainer scale={1.05} transition="0.5s">
             <img style={imgStyle} src={ipad_pro_image} alt="iPad Pro" />
