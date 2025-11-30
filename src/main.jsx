@@ -9,6 +9,9 @@ import Product from '@components/Product';
 
 import "./main.css" // 引入css文件
 
+// 导入数据，默认小写
+import {product} from "@/assets/data.js";
+
 
 // 一个简单的组件
 // 什么是组件
@@ -24,7 +27,11 @@ function App() {
     return (
         <div>
             <h1>Hello, Reac!</h1>
-            <Product/>
+            <Product
+                image={product.image}  // 传递给子组件
+                title={product.title}
+                detail={product.detail}
+            />
         </div>
     )
 }
@@ -55,4 +62,3 @@ rootElement.render(<React.StrictMode>
     {/*它不会影响组件的上下文*/}
     <App/>
 </React.StrictMode>)
-
