@@ -1,5 +1,5 @@
 // import ipad_pro_image from "../assets/images/store-card-ipad-pro.jpeg"
-import ipad_pro_image from "~img/store-card-ipad-pro.jpeg"
+// import ipad_pro_image from "~img/store-card-ipad-pro.jpeg"
 
 import styles from "./Product.module.css"
 import styled from "styled-components";
@@ -17,19 +17,19 @@ const StyledProductContainer = styled.div`
 `;
 
 
-function Product(props) {
+// 参数进行了es6的解包， scale设置默认值，
+function Product({image, title, detail, scale = 1.05, onProduct}) {
     const imgStyle = {
         height: "auto",
         width: "100%",
         borderRadius: "0.5rem",
     };
-    // props.image = "xxxx" //修改会报错
     return (
-        <StyledProductContainer scale={1.05} transition="0.5s">
-            <img style={imgStyle} src={ipad_pro_image} alt="iPad Pro" />
+        <StyledProductContainer scale={scale} transition="0.5s" onClick={()=>{onProduct("title")}}>
+            <img style={imgStyle} src={image} alt="iPad Pro"/>
             <div className={styles.productTextContainer}>
-                <div className={styles["product-title"]}>{props.title}</div>
-                <div className={styles["product-detail"]}>{props.detail}</div>
+                <div className={styles["product-title"]}>{title}</div>
+                <div className={styles["product-detail"]}>{detail}</div>
             </div>
         </StyledProductContainer>
     );

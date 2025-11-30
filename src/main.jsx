@@ -23,14 +23,22 @@ import {product} from "@/assets/data.js";
 // }
 
 function App() {
+    // 定义一个回调方法
+    const handleProductClick = (title) => {
+        alert("product click!" + title)
+    }
+
+
     // 单根节点原则
     return (
         <div>
             <h1>Hello, Reac!</h1>
             <Product
-                image={product.image}  // 传递给子组件
-                title={product.title}
-                detail={product.detail}
+                {...product} // props的批量传递
+                // image={product.image}  // 传递给子组件
+                // title={product.title}
+                // detail={product.detail}
+                onProduct={handleProductClick}
             />
         </div>
     )
