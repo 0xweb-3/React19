@@ -6,7 +6,7 @@ function ProductList({data}) {
     // const isReleased = new Date() >= new Date("2199-01-01");
 
     // 单根节点原则
-    return  data.length > 0 && (
+    return  data.length > 0 ? (
         <div style={{display: 'grid', justifyItems: 'center', rowGap: "3rem"}}>
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <h1 style={{
@@ -16,6 +16,8 @@ function ProductList({data}) {
             {/*必须使用map*/}
             {data.map((item) => (<Product {...item} key={item.title}/>))}
         </div>
+    ): (
+        <div>没有新品</div>
     )
 }
 
