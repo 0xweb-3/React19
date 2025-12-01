@@ -10,7 +10,7 @@ import Product from '@components/Product';
 import "./main.css" // 引入css文件
 
 // 导入数据，默认小写
-import {NEW_ARRIVALS_LIST_2} from "@/assets/data";
+import {NEW_ARRIVALS_LIST} from "@/assets/data";
 import ProductList from "./components/ProductList";
 
 
@@ -26,7 +26,7 @@ import ProductList from "./components/ProductList";
 function App() {
     // 单根节点原则
     return (<div>
-        <ProductList data={NEW_ARRIVALS_LIST_2}/>
+        <ProductList data={NEW_ARRIVALS_LIST}/>
     </div>)
 }
 
