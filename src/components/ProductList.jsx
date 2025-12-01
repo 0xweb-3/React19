@@ -13,7 +13,7 @@ function ProductList({data}) {
             }}>上新品，各个添新意</h1>
         </div>
         {/*必须使用map*/}
-        {data.map((item) => (<Product {...item}/>))}
+        {data.map((item) => (<Product {...item} key={item.title} />))}
     </div>)
 }
 
