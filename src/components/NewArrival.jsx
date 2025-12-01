@@ -26,7 +26,7 @@ const StyledProductContainer = styled.div`
 `;
 
 // 参数进行了es6的解包， scale设置默认值，
-function Product({image, title, detail, scale = 1.05, onProduct, textColor}) {
+function NewArrival({image, title, detail, scale = 1.05, onProduct, textColor}) {
     const imgStyle = {
         height: "auto",
         width: "100%",
@@ -49,4 +49,4 @@ function Product({image, title, detail, scale = 1.05, onProduct, textColor}) {
 }
 
 // 导出供外部使用
-export default Product;
+export default NewArrival;

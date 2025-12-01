@@ -1,5 +1,5 @@
 import React from 'react'; // 是最核心的库，主要用于用于定义和构建组件；
-import Product from '@components/Product';
+import Product from '@components/NewArrival';
 
 const ReleaseNote = () => (
     <div>
@@ -15,26 +15,26 @@ const ProductNotFound = () => (
     </div>
 )
 
-const ListTitle = () => (
+const ListTitle = ({title}) => (
     <div style={{display: "flex", justifyContent: "center"}}>
         <h1 style={{
             fontWeight: "800",
             backgroundImage: "url('src/assets/lines.png')",
             backgroundPosition: "center",
         }}>
-            上新品，各个添新意
+            {title || "新品上市"}
         </h1>
     </div>
 )
 
 
-function ProductList({data}) {
+function ProductList({title, datalength, children}) {
     const isReleased = new Date() <= new Date("2199-01-01");
     if (!isReleased) {
         return <ReleaseNote/>;
     }
 
-    if (data.length <= 0) {
+    if (datalength <= 0) {
         return <ProductNotFound/>;
     }
 
@@ -46,10 +46,8 @@ function ProductList({data}) {
                 rowGap: "3rem",
             }}
         >
-            <ListTitle/>
-            {data.map((p) => (
-                <Product {...p} key={p.title}/>
-            ))}
+            <ListTitle title={title}/>
+            {children}
         </div>
     );
 }

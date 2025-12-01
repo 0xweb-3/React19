@@ -4,14 +4,16 @@ import React from 'react'; // 是最核心的库，主要用于用于定义和�
 // react-dom/client: 是React 18以后才引入的APl,专门用来创建 React应用的入口。
 import ReactDOM from 'react-dom/client'; // 负责将 React 组件渲染到页面上，就是把你写好的组件“挂”到网页上的某个位置；
 
-// import Product from './components/Product';
-import Product from '@components/Product';
+// import NewArrival from './components/NewArrival';
+import Product from '@components/NewArrival';
 
 import "./main.css" // 引入css文件
 
 // 导入数据，默认小写
-import {NEW_ARRIVALS_LIST} from "@/assets/data";
+import {NEW_ARRIVALS_LIST, OFFER_LIST} from "@/assets/data";
 import ProductList from "./components/ProductList";
+import NewArrival from "./components/NewArrival";
+import Offer from "./components/Offer.jsx";
 
 
 // 一个简单的组件
@@ -26,7 +28,23 @@ import ProductList from "./components/ProductList";
 function App() {
     // 单根节点原则
     return (<div>
-        <ProductList data={NEW_ARRIVALS_LIST}/>
+        <ProductList
+            title={"上新品，各个添新意。"}
+            datalength={NEW_ARRIVALS_LIST.length}
+        >
+            {NEW_ARRIVALS_LIST.map((item) => (
+                <NewArrival key={item.title} {...item} scale={1.05}/>
+            ))}
+        </ProductList>
+
+        <ProductList
+            title={"限时折扣，买到就是赚到。"}
+            datalength={OFFER_LIST.length}
+        >
+            {OFFER_LIST.map((item) => (
+                <Offer key={item.title} {...item} />
+            ))}
+        </ProductList>
     </div>)
 }
 
