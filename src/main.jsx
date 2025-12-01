@@ -10,7 +10,8 @@ import Product from '@components/Product';
 import "./main.css" // 引入css文件
 
 // 导入数据，默认小写
-import {product} from "@/assets/data.js";
+import {NEW_ARRIVALS_LIST} from "@/assets/data";
+import ProductList from "./components/ProductList";
 
 
 // 一个简单的组件
@@ -23,25 +24,10 @@ import {product} from "@/assets/data.js";
 // }
 
 function App() {
-    // 定义一个回调方法
-    const handleProductClick = (title) => {
-        alert("product click!" + title)
-    }
-
-
     // 单根节点原则
-    return (
-        <div>
-            <h1>Hello, Reac!</h1>
-            <Product
-                {...product} // props的批量传递
-                // image={product.image}  // 传递给子组件
-                // title={product.title}
-                // detail={product.detail}
-                onProduct={handleProductClick}
-            />
-        </div>
-    )
+    return (<div>
+        <ProductList data={NEW_ARRIVALS_LIST}/>
+    </div>)
 }
 
 
