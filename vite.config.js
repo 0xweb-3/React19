@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path"; // 用于拼接路径或转换绝对路径
 import { fileURLToPath } from "url"; //把url转为文件的路径
 import eslint from "vite-plugin-eslint";
+import tailwindcss from "@tailwindcss/vite";
+
 
 const __filename = fileURLToPath(import.meta.url); // 转换meta url
 const __dirname = path.dirname(__filename); // 生成工作路径
@@ -15,6 +17,7 @@ export default defineConfig({
   plugins: [
       react(),
       eslint(),
+      tailwindcss({})
   ], // 插件
   server: {
     port: 3000,

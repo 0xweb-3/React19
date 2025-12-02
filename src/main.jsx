@@ -30,17 +30,23 @@ import Home from "./pages/Home.jsx";
 // }
 
 function App() {
-    // 单根节点原则
     return (
-        <MainLayout
-            header={<Header/>}
-            content={<Home/>}
-            footer={<Footer/>}
-        >
-
-        </MainLayout>
+        <h1 className="text-3xl font-bold text-blue-600">Tailwind CSS + Vite + React</h1>
     )
 }
+
+// function App() {
+//     // 单根节点原则
+//     return (
+//         <MainLayout
+//             header={<Header/>}
+//             content={<Home/>}
+//             footer={<Footer/>}
+//         >
+//
+//         </MainLayout>
+//     )
+// }
 
 
 // JSX 是JavaScript 的语法扩展，它让我们可以在 JavaScript 里直接写出类似HTML的结构
