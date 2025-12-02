@@ -4,12 +4,15 @@ import ProductList from "@/components/ProductList";
 import NewArrival from "@/components/NewArrival";
 import Offer from "@/components/Offer.jsx";
 import withSoldOut from "../HOCs/withSoldOut.jsx";
+import withBanner from "../HOCs/withBanner.jsx";
 
 // const NewArrivalWithSoldOutCheck = withSoldOut(NewArrival) // 添加售罄检查
 const NewArrivalWithSoldOutCheck = withSoldOut((props) => {
     const {title} = props;
     return (<NewArrival {...props} title={"商品" + title}/>)
 })
+
+const NewArrivalWithBannerAndSoldOut = withBanner(NewArrivalWithSoldOutCheck, "手慢🈚️！")
 
 const OfferWithSoldOutCheck = withSoldOut(Offer)
 
@@ -21,7 +24,7 @@ function Home() {
             datalength={NEW_ARRIVALS_LIST.length}
         >
             {NEW_ARRIVALS_LIST.map((item) => (
-                <NewArrivalWithSoldOutCheck key={item.title} {...item} scale={1.05}/>
+                <NewArrivalWithBannerAndSoldOut key={item.title} {...item} scale={1.05}/>
             ))}
         </ProductList>
 
