@@ -5,6 +5,7 @@ import NewArrival from "@/components/NewArrival";
 import Offer from "@/components/Offer.jsx";
 import withSoldOut from "../HOCs/withSoldOut.jsx";
 import withBanner from "../HOCs/withBanner.jsx";
+import ImageHero from "../components/ImageHero";
 
 // const NewArrivalWithSoldOutCheck = withSoldOut(NewArrival) // 添加售罄检查
 const NewArrivalWithSoldOutCheck = withSoldOut((props) => {
@@ -19,6 +20,7 @@ const OfferWithSoldOutCheck = withSoldOut(Offer)
 function Home() {
     // 单根节点原则
     return (<div>
+        <ImageHero/>
         <ProductList
             title={"上新品，各个添新意。"}
             datalength={NEW_ARRIVALS_LIST.length}
