@@ -4,6 +4,7 @@ import path from "path"; // 用于拼接路径或转换绝对路径
 import { fileURLToPath } from "url"; //把url转为文件的路径
 import eslint from "vite-plugin-eslint";
 import tailwindcss from "@tailwindcss/vite";
+import svgr from "vite-plugin-svgr";
 
 
 const __filename = fileURLToPath(import.meta.url); // 转换meta url
@@ -17,7 +18,8 @@ export default defineConfig({
   plugins: [
       react(),
       eslint(),
-      tailwindcss({})
+      tailwindcss({}),
+      svgr(),
   ], // 插件
   server: {
     port: 3000,
