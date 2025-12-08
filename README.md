@@ -60,8 +60,8 @@
   - v5.4.0 React 状态管理的特点(上)✅
   - v5.5.0 React 状态管理的特点(下)✅
   - v5.6.0 React State 实战：SKU选择器✅
-  - v5.7.0 状态提升（Lifting State Up）
-  - v5.8.0 状态提升实战：公共组件状态共享
+  - v5.7.0 状态提升（Lifting State Up）✅
+  - v5.8.0 状态提升实战：公共组件状态共享✅
   - v5.9.0 React 深层嵌套 State 更新避坑实战
   - v5.10.0 State 不可变性：用“副本”守护你的组件！
   - v5.11.0 复杂State更新的艺术：Immer 黑魔法

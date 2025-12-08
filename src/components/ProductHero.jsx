@@ -1,6 +1,14 @@
 import SkuSelect from "./SkuSelect";
+import {useState} from "react";
 
-function ProductHero({ product, imageUrl }) {
+function ProductHero({product, imageUrl}) {
+    const [selectedModel, setSelectedModel] = useState();
+    const [selectedColor, setSelectedColor] = useState();
+    const [selectedMemorySize, setSelectedMemorySize] = useState();
+
+    // 打开了严格模式，会打印2次
+    console.log("ProductHero", selectedModel, selectedColor, selectedMemorySize);
+
     return (
         <div
             className="flex flex-col lg:flex-row-reverse
@@ -11,7 +19,7 @@ function ProductHero({ product, imageUrl }) {
     "
         >
             <div className="flex-1 flex justify-center items-center">
-                <img src={imageUrl} className="w-[350px] lg:-mt-32 lg:ml-19" />
+                <img src={imageUrl} className="w-[350px] lg:-mt-32 lg:ml-19"/>
             </div>
             <div className="flex-1 space-y-6 ml-6 md:ml-24">
                 <div className="text-4xl font-black md:text-6xl">
@@ -24,11 +32,18 @@ function ProductHero({ product, imageUrl }) {
                     <SkuSelect
                         placeholder={"型号"}
                         options={product.models.map((model) => model.name)}
+                        onChange={setSelectedModel}
+                        value={selectedModel}
                     />
-                    <SkuSelect placeholder={"颜色"} options={product.colors} />
+                    <SkuSelect placeholder={"颜色"} options={product.colors}
+                               onChange={setSelectedColor}
+                               value={selectedColor}
+                    />
                     <SkuSelect
                         placeholder={"储存容量"}
                         options={product.memorySizes.map((size) => size.name)}
+                        onChange={setSelectedMemorySize}
+                        value={selectedMemorySize}
                     />
                     <button
                         className="
@@ -38,6 +53,7 @@ function ProductHero({ product, imageUrl }) {
             hover:bg-apple-blue
             hover:text-apple-gray-100
           "
+                        onClick={() => {alert("加入购物车"+ selectedModel+ selectedColor + selectedMemorySize)}}
                     >
                         加入购物车
                     </button>
