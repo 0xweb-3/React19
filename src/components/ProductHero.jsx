@@ -1,10 +1,11 @@
 import SkuSelect from "./SkuSelect";
 import {useState} from "react";
+import {produce} from "immer";
 
 function ProductHero({product, imageUrl}) {
-    const [selectedModel, setSelectedModel] = useState();
-    const [selectedColor, setSelectedColor] = useState();
-    const [selectedMemorySize, setSelectedMemorySize] = useState();
+    // const [selectedModel, setSelectedModel] = useState();
+    // const [selectedColor, setSelectedColor] = useState();
+    // const [selectedMemorySize, setSelectedMemorySize] = useState();
 
     const [cartItem, setCartItem] = useState({
         productId: product.id,
@@ -40,8 +41,16 @@ function ProductHero({product, imageUrl}) {
                     <SkuSelect
                         placeholder={"型号"}
                         options={product.models.map((model) => model.name)}
+                        // onChange={(value) => {
+                        //     setCartItem({...cartItem, model: value})
+                        // }}
                         onChange={(value) => {
-                            setCartItem({...cartItem, model: value})
+                            const newState = produce(cartItem, (draft) => {
+                                // draft代表原始的代理副本
+                                draft.model = value;
+                            })
+                            setCartItem(newState)
+                            console.log(newState)
                         }}
                         value={cartItem.model}
                     />

@@ -30,7 +30,7 @@ export default defineConfig([
             "react-refresh/only-export-components": "off",
             'no-unused-vars': ['error', {argsIgnorePattern: '^[A-Z_]',varsIgnorePattern: '^[A-Z_]'}],
             "no-param-reassign": [
-                "error", // warn, off
+                "warn", // warn, off
                 {
                     props: true,
                     ignorePropertyModificationsFor: ["ref"],

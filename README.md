@@ -62,8 +62,8 @@
   - v5.6.0 React State 实战：SKU选择器✅
   - v5.7.0 状态提升（Lifting State Up）✅
   - v5.8.0 状态提升实战：公共组件状态共享✅
-  - v5.9.0 React 深层嵌套 State 更新避坑实战
-  - v5.10.0 State 不可变性：用“副本”守护你的组件！
+  - v5.9.0 React 深层嵌套 State 更新避坑实战✅
+  - v5.10.0 State 不可变性：用“副本”守护你的组件！✅
   - v5.11.0 复杂State更新的艺术：Immer 黑魔法
   - v5.12.0 柯里化 + Immer：万能 State 更新器
 - v6.0.0 React + TypeScript：从组件到API的类型安全闭环
