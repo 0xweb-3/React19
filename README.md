@@ -56,16 +56,16 @@
 - v5.0.0 掌握 React 状态本质：构建可预测的组件交互流程
   - v5.1.0 章节技术预览：React 状态管理核心技术一览✅
   - v5.2.0 黑暗模式切换翻车实录：从 let 到 useState 的正确打开方式✅
-  - v5.3.0 React 状态（State）深度解析
-  - React 状态管理的特点(上)
-  - React 状态管理的特点(下)
-  - React State 实战：SKU选择器
-  - 状态提升（Lifting State Up）
-  - 状态提升实战：公共组件状态共享
-  - React 深层嵌套 State 更新避坑实战
-  - State 不可变性：用“副本”守护你的组件！
-  - 复杂State更新的艺术：Immer 黑魔法
-  - 柯里化 + Immer：万能 State 更新器
+  - v5.3.0 React 状态（State）深度解析✅
+  - v5.4.0 React 状态管理的特点(上)✅
+  - v5.5.0 React 状态管理的特点(下)✅
+  - v5.6.0 React State 实战：SKU选择器✅
+  - v5.7.0 状态提升（Lifting State Up）
+  - v5.8.0 状态提升实战：公共组件状态共享
+  - v5.9.0 React 深层嵌套 State 更新避坑实战
+  - v5.10.0 State 不可变性：用“副本”守护你的组件！
+  - v5.11.0 复杂State更新的艺术：Immer 黑魔法
+  - v5.12.0 柯里化 + Immer：万能 State 更新器
 - v6.0.0 React + TypeScript：从组件到API的类型安全闭环
 - V7.0.0 React Router v6：动态路由与前端应用拓扑
 - v8.0.0 副作用处理 useEffect 与异步请求
