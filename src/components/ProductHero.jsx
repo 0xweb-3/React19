@@ -6,6 +6,14 @@ function ProductHero({product, imageUrl}) {
     const [selectedColor, setSelectedColor] = useState();
     const [selectedMemorySize, setSelectedMemorySize] = useState();
 
+    const [cartItem, setCartItem] = useState({
+        productId: product.id,
+        imageSrc: product.image,
+        model: null,
+        color: null,
+        memorySize: null
+    })
+
     // 打开了严格模式，会打印2次
     console.log("ProductHero", selectedModel, selectedColor, selectedMemorySize);
 
@@ -32,18 +40,24 @@ function ProductHero({product, imageUrl}) {
                     <SkuSelect
                         placeholder={"型号"}
                         options={product.models.map((model) => model.name)}
-                        onChange={setSelectedModel}
-                        value={selectedModel}
+                        onChange={(value) => {
+                            setCartItem({...cartItem, model: value})
+                        }}
+                        value={cartItem.model}
                     />
                     <SkuSelect placeholder={"颜色"} options={product.colors}
-                               onChange={setSelectedColor}
-                               value={selectedColor}
+                               onChange={(value) => {
+                                   setCartItem({...cartItem, color: value})
+                               }}
+                               value={cartItem.color}
                     />
                     <SkuSelect
                         placeholder={"储存容量"}
                         options={product.memorySizes.map((size) => size.name)}
-                        onChange={setSelectedMemorySize}
-                        value={selectedMemorySize}
+                        onChange={(value) => {
+                            setCartItem({...cartItem, memorySize: value})
+                        }}
+                        value={cartItem.memorySize}
                     />
                     <button
                         className="
@@ -53,7 +67,9 @@ function ProductHero({product, imageUrl}) {
             hover:bg-apple-blue
             hover:text-apple-gray-100
           "
-                        onClick={() => {alert("加入购物车"+ selectedModel+ selectedColor + selectedMemorySize)}}
+                        onClick={() => {
+                            alert("加入购物车" + selectedModel + selectedColor + selectedMemorySize)
+                        }}
                     >
                         加入购物车
                     </button>
