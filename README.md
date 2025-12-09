@@ -66,9 +66,9 @@
   - v5.10.0 State 不可变性：用“副本”守护你的组件！✅
   - v5.11.0 复杂State更新的艺术：Immer 黑魔法✅
   - v5.12.0 柯里化 + Immer：万能 State 更新器✅
-- v6.0.0 【类型安全】React + TypeScript：从组件到API的类型安全闭环
-  - v6.1.0 章节技术预览：React + TypeScript 类型安全体系与实践路线
-  - v6.2.0 项目系上安全带：从 JS 平滑升级到 TS
+- v6.0.0 【类型安全】React + TypeScript：从组件到API的类型安全闭环✅
+  - v6.1.0 章节技术预览：React + TypeScript 类型安全体系与实践路线✅
+  - v6.2.0 项目系上安全带：从 JS 平滑升级到 TS✅
   - v6.3.0 组件 props 类型声明实战：MainLayout 的 TS 类型升级
   - v6.4.0 优雅定义 props 类型：类型别名 type
   - v6.5.0 interface+联合类型封装万能按钮组件

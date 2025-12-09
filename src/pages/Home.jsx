@@ -2,10 +2,10 @@
 import {NEW_ARRIVALS_LIST, OFFER_LIST} from "@/assets/data";
 import ProductList from "@/components/ProductList";
 import NewArrival from "@/components/NewArrival";
-import Offer from "@/components/Offer.jsx";
+import Offer from "@/components/Offer.tsx";
 import withSoldOut from "../HOCs/withSoldOut.jsx";
 import withBanner from "../HOCs/withBanner.jsx";
-import ImageHero from "../components/ImageHero";
+import ImageHero from "../components/ImageHero.js";
 
 // const NewArrivalWithSoldOutCheck = withSoldOut(NewArrival) // 添加售罄检查
 const NewArrivalWithSoldOutCheck = withSoldOut((props) => {

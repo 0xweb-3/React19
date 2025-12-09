@@ -1,7 +1,7 @@
 import Logo from "../assets/apple.svg?react" // 注意加上?react才能， 不加？react 需要使用<img src={Logo} alt="logo" />
 import {AiOutlineMenu, AiOutlineSearch} from "react-icons/ai";
 import {useState} from "react";
-import DarkToggle from "@components/DarkToggle.jsx";
+import DarkToggle from "@components/DarkToggle.tsx";
 
 
 const Header = () => {

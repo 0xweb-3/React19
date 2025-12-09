@@ -5,20 +5,21 @@ import React from 'react'; // 是最核心的库，主要用于用于定义和�
 import ReactDOM from 'react-dom/client'; // 负责将 React 组件渲染到页面上，就是把你写好的组件“挂”到网页上的某个位置；
 
 // import NewArrival from './components/NewArrival';
-import Product from '@components/NewArrival';
+// import Product from  '@components/NewArrival';
 
+// @ts-ignore
 import "./main.css" // 引入css文件
 
 // 导入数据，默认小写
-import {NEW_ARRIVALS_LIST, OFFER_LIST} from "@/assets/data";
-import ProductList from "./components/ProductList";
-import NewArrival from "./components/NewArrival";
-import Offer from "./components/Offer.jsx";
+// import {NEW_ARRIVALS_LIST, OFFER_LIST} from "@/assets/data";
+import ProductList from "./components/ProductList.js";
+import NewArrival from "./components/NewArrival.js";
+import Offer from "./components/Offer";
 
-import MainLayout from "./layouts/MainLayout.jsx";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import Home from "./pages/Home.jsx";
+import MainLayout from "./layouts/MainLayout";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 // 一个简单的组件
 // 什么是组件
@@ -52,7 +53,13 @@ function App() {
 // JSX 是JavaScript 的语法扩展，它让我们可以在 JavaScript 里直接写出类似HTML的结构
 
 // 将组件渲染进去
-const root = document.getElementById('root'); // 获取id 为root的DOM元素
+// const root = document.getElementById('root')!; // 获取id 为root的DOM元素 !表示非空断言
+const root = document.getElementById('root') ?? document.createElement("div");
+// 提前做类型的判断
+if (!root) {
+    throw new Error("Root element not found")
+}
+
 const rootElement = ReactDOM.createRoot(root); //创建一个React根元素
 // rootElement.render(<App/>); // 渲染App组件到根元素
 
