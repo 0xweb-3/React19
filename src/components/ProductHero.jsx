@@ -2,6 +2,14 @@ import SkuSelect from "./SkuSelect";
 import {useState} from "react";
 import {produce} from "immer";
 
+const updateModel = (value) => {
+    return produce(
+        (draft) => {
+            draft.model = value;
+        }
+    )
+}
+
 function ProductHero({product, imageUrl}) {
     // const [selectedModel, setSelectedModel] = useState();
     // const [selectedColor, setSelectedColor] = useState();
@@ -39,14 +47,21 @@ function ProductHero({product, imageUrl}) {
                     // onChange={(value) => {
                     //     setCartItem({...cartItem, model: value})
                     // }}
+                    // onChange={(value) => {
+                    //     const newState = produce(cartItem, (draft) => {
+                    //         // draft代表原始的代理副本
+                    //         draft.model = value;
+                    //     })
+                    //     setCartItem(newState)
+                    //     console.log(newState)
+                    // }}
                     onChange={(value) => {
-                        const newState = produce(cartItem, (draft) => {
-                            // draft代表原始的代理副本
-                            draft.model = value;
-                        })
-                        setCartItem(newState)
-                        console.log(newState)
+                        setCartItem(
+                            updateModel(value)
+                        )
+                        console.log(cartItem)
                     }}
+
                     value={cartItem.model}
                 />
                 <SkuSelect placeholder={"颜色"} options={product.colors}
