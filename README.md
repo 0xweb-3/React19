@@ -9,12 +9,12 @@
 
 ## 进度
 
-- v1.0.0 搭建前沿开发环境
+- v1.0.0 【入门基石】搭建前沿开发环境
   - v1.1.0 Vite + React 19 构建开发环境 ✅
   - v1.2.0 项目总控：package.json✅
   - v1.3.0 工程监理：package-lock.json✅
   - v1.4.0 施工蓝图：vite.config.js✅
-- v2.0.0 React核心机制与组件化艺术
+- v2.0.0 【底层逻辑】React核心机制与组件化艺术
   - v2.1.0 React 根组件：从零开始构建你的应用✅
   - v2.2.0  JSX 语法革命：从HTML到React的华丽变身✅
   - v2.3.0  JSX + 组件 + 单根法则：React世界的第一性原理✅
@@ -26,7 +26,7 @@
   - v2.9.0 Props 单向数据流：不可变性的防崩溃设计哲学✅
   - v2.10.0 如何防止 props 被非法修改？用 ESLint 保驾护航✅
   - v2.11.0 Props黑科技：解构开箱+默认兜底+Spread批量+回调呼叫✅
-- v3.0.0 React组件性能突围: 组合×短路×插槽×HOC×富文本✅
+- v3.0.0 【高效渲染】React组件性能突围: 组合×短路×插槽×HOC×富文本✅
   - v3.1.0 React 实战之路：从列表渲染到高阶组件全掌握✅
   - v3.2.0 列表渲染工业级实践：让数据驱动UI✅
   - v3.3.0 Key 属性玄机：Diff算法核心优化策略✅
@@ -39,7 +39,7 @@
   - v3.10.0 HOC 高阶组件：代码界的“套娃大师” ✅
     - v3.10.1 基本用法✅
     - v3.10.2 添加中间组件✅
-- v4.0.0 React+Tailwind CSS：原子化CSS与高定制化主题系统
+- v4.0.0 【颜值革命】React+Tailwind CSS：原子化CSS与高定制化主题系统
   - v4.1.0 章节技术预览：掌握 React 和 Tailwind CSS，打造前端高效利器✅
   - v4.2.0 CSS 开发的四大酷刑：传统 CSS 痛点与 Tailwind CSS 的魔法✅
   - v4.3.0 React + Tailwind CSS 开发配置：让 Tailwind 融入 Vite 项✅
@@ -53,7 +53,7 @@
   - v4.11.0 黑暗模式：React 与 Tailwind CSS 的完美暗黑切换✅
   - v4.13.0 主题与指令：自定义 CSS 变量与 Tailwind 的模式设计✅
   - v4.14.0 综合实战：打造响应式的产品推荐组件
-- v5.0.0 掌握 React 状态本质：构建可预测的组件交互流程
+- v5.0.0 【交互革命】掌握 React 状态本质：构建可预测的组件交互流程
   - v5.1.0 章节技术预览：React 状态管理核心技术一览✅
   - v5.2.0 黑暗模式切换翻车实录：从 let 到 useState 的正确打开方式✅
   - v5.3.0 React 状态（State）深度解析✅
@@ -66,7 +66,48 @@
   - v5.10.0 State 不可变性：用“副本”守护你的组件！✅
   - v5.11.0 复杂State更新的艺术：Immer 黑魔法✅
   - v5.12.0 柯里化 + Immer：万能 State 更新器✅
-- v6.0.0 React + TypeScript：从组件到API的类型安全闭环
-- V7.0.0 React Router v6：动态路由与前端应用拓扑
-- v8.0.0 副作用处理 useEffect 与异步请求
-- v9.0.0 Context API：跨组件状态管理的降维解法（购物车场景剖析）
+- v6.0.0 【类型安全】React + TypeScript：从组件到API的类型安全闭环
+  - v6.1.0 章节技术预览：React + TypeScript 类型安全体系与实践路线
+  - v6.2.0 项目系上安全带：从 JS 平滑升级到 TS
+  - v6.3.0 组件 props 类型声明实战：MainLayout 的 TS 类型升级
+  - v6.4.0 优雅定义 props 类型：类型别名 type
+  - v6.5.0 interface+联合类型封装万能按钮组件
+  - v6.6.0 interface extends 揭秘组件继承与扩展
+  - v6.7.0 .d.ts 到底是干啥的？带你解决样式别名等常见 TS 报错
+  - v6.8.0 React 事件类型深入剖析
+  - v6.9.0 事件函数在组件里的实际应用
+  - v6.10.0 useState 类型安全规范
+  - v6.11.0 TS + useState 深度实战：构建强类型电商状态模型
+- V7.0.0 【路由纵览】React Router v6：动态路由与前端应用拓扑
+  - V7.1.0 React Router 是什么？
+  - V7.2.0 搭建路由页面结构：BrowserRouter + Route 实战讲解
+  - V7.3.0 index 文件的妙用
+  - V7.4.0 用 Outlet 解锁专业级路由布局方案
+  - V7.5.0 React Router v6 新特性：createBrowserRouter 全解析
+  - V7.6.0 中大型 React 项目必学：createBrowserRouter + Layout 路由
+  - V7.7.0 404 + Error Boundary：优雅处理不存在的路由与错误降级策略
+  - V7.8.0 Link vs NavLink：打造高亮交互式菜单栏
+  - V7.9.0 编程式导航：useNavigate的智能重定向
+  - V7.10.0 URL参数匹配（上）：动态路由 useParams-
+  - V7.11.0 URL参数匹配（中）查询参数 useSearchParams
+  - V7.12.0 URL参数匹配（下）：useParams vs useSearchParams
+  - V7.13.0 鉴权集成：登录状态与路由权限的联动方案
+- v8.0.0【数据驱动】副作用处理 useEffect 与异步请求
+  - v8.1.0【API说明】课程后端在哪里
+  - v8.2.0 异步请求的本质
+  - v8.3.0 副作用处理函数 useEffect
+  - v8.4.0 用 useEffect 搞定搜索功能：从发请求到页面渲染的完整攻略
+  - v8.5.0 错误处理策略
+  - v8.6.0 彻底搞懂 useEffect 依赖数组：谁变谁触发！
+  - v8.7.0 用好 useEffect 清理函数：内存泄漏不再
+  - v8.8.0 API 请求的竞争与取消：AbortController
+  - v8.9.0 输入防抖实战 useDebounce：拒绝服务器爆炸！
+  - v8.10.0 useEffect + fetch 正确姿势：asyncawait 带你飞
+  - v8.11.0 搜索UI优雅重构：苹果风搜索组件与可复用按钮实战
+  - v8.12.0 用 React Router Loaders 优化数据加载：提升用户体验的利器
+  - v8.13.0 综合实战：产品详情页面UI重构
+- v9.0.0 【状态驱动】Context API：跨组件状态管理的降维解法（购物车场景剖析）
+- v10.0.0【函数范式】React Hooks 深度赋能：函数式组件的状态逻辑革命
+- v11.0.0【状态跃迁】useReducer 范式：复杂状态的可预测性方案
+- v12.0.0【全局状态】Redux 生态重构：从 Flux 到 RTK 的工业级实践
+- v13.0.0【全栈实战】电商系统攻坚：用户登录 → 购物车下单 → 订单支付链路
