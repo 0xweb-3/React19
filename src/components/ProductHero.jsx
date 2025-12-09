@@ -10,6 +10,14 @@ const updateModel = (value) => {
     )
 }
 
+const updateItem = (key, value) => {
+    return produce(
+        (draft) => {
+            draft[key] = value;
+        }
+    )
+}
+
 function ProductHero({product, imageUrl}) {
     // const [selectedModel, setSelectedModel] = useState();
     // const [selectedColor, setSelectedColor] = useState();
@@ -57,7 +65,8 @@ function ProductHero({product, imageUrl}) {
                     // }}
                     onChange={(value) => {
                         setCartItem(
-                            updateModel(value)
+                            // updateModel(value)
+                            updateItem("model", value)
                         )
                         console.log(cartItem)
                     }}
