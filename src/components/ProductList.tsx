@@ -1,5 +1,4 @@
 import React from 'react'; // 是最核心的库，主要用于用于定义和构建组件；
-import Product from '@components/NewArrival';
 
 const ReleaseNote = () => (
     <div>
@@ -15,7 +14,7 @@ const ProductNotFound = () => (
     </div>
 )
 
-const ListTitle = ({title}) => (
+const ListTitle = ({title}:{title:string}) => (
     <div style={{display: "flex", justifyContent: "center"}}>
         <h1 style={{
             fontWeight: "800",
@@ -27,8 +26,16 @@ const ListTitle = ({title}) => (
     </div>
 )
 
+type ProductListProps = {
+    title?: string;
+    datalength: number;
+    children: React.ReactNode
+}
 
-function ProductList({title, datalength, children}) {
+//  React.FC<ProductListProps> =(  // 函数式组件类型定义
+
+// function ProductList({title, datalength, children}) {
+const ProductList = ({title, datalength, children}: ProductListProps) => {
     const isReleased = new Date() <= new Date("2199-01-01");
     if (!isReleased) {
         return <ReleaseNote/>;
