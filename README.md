@@ -70,7 +70,7 @@
   - v6.1.0 章节技术预览：React + TypeScript 类型安全体系与实践路线✅
   - v6.2.0 项目系上安全带：从 JS 平滑升级到 TS✅
   - v6.3.0 组件 props 类型声明实战：MainLayout 的 TS 类型升级✅
-  - v6.4.0 优雅定义 props 类型：类型别名 type
+  - v6.4.0 优雅定义 props 类型：类型别名 type✅
   - v6.5.0 interface+联合类型封装万能按钮组件
   - v6.6.0 interface extends 揭秘组件继承与扩展
   - v6.7.0 .d.ts 到底是干啥的？带你解决样式别名等常见 TS 报错
