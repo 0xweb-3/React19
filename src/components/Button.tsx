@@ -1,11 +1,11 @@
-interface ButtonProps {
-    title?: string;
+export interface ButtonProps { // 导出原本的定义
+    title?: React.ReactNode;
     variant?: "primary" | "outline";
     disabled?: boolean;
     onClick?: () => void;
 }
 
-const Button = ({title, variant = "primary", disabled=false, onClick}: ButtonProps) => {
+const Button = ({title, variant = "primary", disabled = false, onClick}: ButtonProps) => {
     let className = `px-5 py-2 rounded-md border
                    transition-colors duration-200
                    inline-flex items-center justify-center gap-2`;

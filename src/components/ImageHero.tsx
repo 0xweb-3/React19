@@ -1,6 +1,9 @@
 import hero_small_image from "../assets/images/hero_small.jpg"
 import hero_image from "../assets/images/hero.jpg"
 import Button from "./Button";
+import IconButton from "./iconButton";
+import {MdOutlineNavigateNext} from "react-icons/md";
+import {AiOutlineShoppingCart} from "react-icons/ai";
 
 
 // Hero表示页面最上方的大图区域
@@ -16,8 +19,21 @@ const ImageHero = () => {
                 iPhone 14 Pro
             </div>
             <div className="mt-4 flex space-x-4">
-                <Button title="进一步了解" variant="primary"/>
-                <Button title="购买" variant="outline"/>
+                <IconButton
+                    icon={<MdOutlineNavigateNext/>}
+                    iconPosition="right"
+                    title="进一步了解"
+                    variant="primary"
+                />
+                <IconButton
+                    icon={<AiOutlineShoppingCart/>}
+                    title="购买"
+                    variant="outline"
+                />
+
+
+                {/*<Button title="进一步了解" variant="primary"/>*/}
+                {/*<Button title="购买" variant="outline"/>*/}
                 {/*<button className="px-6 py-2 border border-blue-600 bg-blue-700 text-white rounded-md hover:bg-blue-900 transition">进一步了解*/}
                 {/*</button>*/}
                 {/*<button className="px-6 py-2 border border-blue-600 bg-transparent text-white rounded-md hover:bg-blue-700 transition">购买</button>*/}
